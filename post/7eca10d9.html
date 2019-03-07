@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#fff">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 1px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "b6d6acce"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="https://fonts.cat.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#fff">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="遗传算法综述摘  要：遗传算法（Genetic Algorithms, GA）是一种基于遗传学和自然选择原理的启发搜索最优化技术方法。其核心思想来源于达尔文的进化论，“物竞天择”，“适者生存”，模仿借鉴生物进化过程机制而提出的一种启发式全局搜索算法。它常被用于找寻解决需要花费大量时间问题的最优或接近最优的解决方案，通常用于为优化问题和搜索问题生成高质量的解决方案。近年来，随着科学技术的发展遗传算法">
+<meta name="keywords" content="课程,模式识别,遗传算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="模式识别原理与技术">
+<meta property="og:url" content="https://myliwu.work/post/7eca10d9.html">
+<meta property="og:site_name" content="Liwu&#39;s blog">
+<meta property="og:description" content="遗传算法综述摘  要：遗传算法（Genetic Algorithms, GA）是一种基于遗传学和自然选择原理的启发搜索最优化技术方法。其核心思想来源于达尔文的进化论，“物竞天择”，“适者生存”，模仿借鉴生物进化过程机制而提出的一种启发式全局搜索算法。它常被用于找寻解决需要花费大量时间问题的最优或接近最优的解决方案，通常用于为优化问题和搜索问题生成高质量的解决方案。近年来，随着科学技术的发展遗传算法">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-06T05:03:53.319Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="模式识别原理与技术">
+<meta name="twitter:description" content="遗传算法综述摘  要：遗传算法（Genetic Algorithms, GA）是一种基于遗传学和自然选择原理的启发搜索最优化技术方法。其核心思想来源于达尔文的进化论，“物竞天择”，“适者生存”，模仿借鉴生物进化过程机制而提出的一种启发式全局搜索算法。它常被用于找寻解决需要花费大量时间问题的最优或接近最优的解决方案，通常用于为优化问题和搜索问题生成高质量的解决方案。近年来，随着科学技术的发展遗传算法">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Liwu's blog" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://myliwu.work/post/7eca10d9.html">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>模式识别原理与技术 | Liwu's blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Liwu's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Simple Notes</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-futbol-o"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-reading">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/reading/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>读书/观影</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://myliwu.work/post/7eca10d9.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="muzhi">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Liwu's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">模式识别原理与技术
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 12:54:09 / 修改时间：13:03:53" itemprop="dateCreated datePublished" datetime="2019-03-06T12:54:09+08:00">2019-03-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/论文/" itemprop="url" rel="index"><span itemprop="name">论文</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/post/7eca10d9.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/post/7eca10d9.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/post/7eca10d9.html" class="leancloud_visitors" data-flag-title="模式识别原理与技术">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="遗传算法综述"><a href="#遗传算法综述" class="headerlink" title="遗传算法综述"></a>遗传算法综述</h2><p>摘  要：遗传算法（Genetic Algorithms, GA）是一种基于遗传学和自然选择原理的启发搜索最优化技术方法。其核心思想来源于达尔文的进化论，“物竞天择”，“适者生存”，模仿借鉴生物进化过程机制而提出的一种启发式全局搜索算法。它常被用于找寻解决需要花费大量时间问题的最优或接近最优的解决方案，通常用于为优化问题和搜索问题生成高质量的解决方案。近年来，随着科学技术的发展遗传算法常被用在机器学习 ,图象识别 ,人工神经网络等问题上。</p>
+<p><strong>关键词：遗传算法；自然选择；GA；进化论；启发式搜索</strong></p>
+<h3 id="1-引言"><a href="#1-引言" class="headerlink" title="1 引言"></a>1 引言</h3><p>遗传算法（Genetic Algorithms, GA）来源于达尔文的进化论，达尔文进化论中的自然选择的过程是通过特点的选择因素从群体中选择最适合的个体。他们生产的后代将继承了父母的特征，并且遗传到下一代。最后，将找到最适合个体的一代。遗传算法是模拟自然选择的过程，这意味着那些能够适应环境变化的物种能够生存和繁殖并进入下一代。简单来说，他们模拟连续一代个体中的“适者生存”来解决问题。每一代都由一群个体组成，每个个体代表搜索空间中的一个点和可能的解决方案。通过遗传算法迭代后将在搜索空间中找到我们最优的个体，或者最接近我们需求的个体，一次达到解决问题的诉求。近年来，随着新型科技与思想的兴起，GA愈发得到世界上广大研究者的青睐。</p>
+<h3 id="2-遗传算法研究现状分析"><a href="#2-遗传算法研究现状分析" class="headerlink" title="2 遗传算法研究现状分析"></a>2 遗传算法研究现状分析</h3><p>遗传算法源于进化论，虽然进化过程的计算机模拟可以追溯到20世纪50年代，但我们今天所认为的遗传算法（Genetic Algorithms，也称为“GA”）的大部分内容都是由密歇根大学教授约翰·霍兰德（John Holland）开发的，他的著作“ 适者生存”和人工系统是GA研究的先驱。今天，更多的遗传算法是更广泛的研究领域的一部分，通常被称为“进化计算”。 早在1962年，John Holland在自适应系统方面的工作为后来的发展奠定了基础; 遗传算法领域的开创性工作于1975年出版，出版了“ <em>适应自然和人工系统</em> ”一书。在荷兰本人和密歇根大学同事的早期研究和论文的基础上，本书是第一本系统地，严谨地使用变异，选择和交叉，模拟生物进化过程的自适应数字系统的概念，作为解决问题的策略。</p>
+<p>到20世纪80年代早期到中期，遗传算法被应用于广泛的主题，从填充和图形着色等抽象数学问题到管道流量控制，模式识别和分类以及结构优化等有形工程问题。</p>
+<p>起初，这些应用主要是理论上的。然而，随着研究的不断增加，遗传算法逐渐迁移到商业领域，它们的增长是由计算能力的指数增长和互联网的发展推动的。今天，进化计算是一个蓬勃发展的领域，在研究领域，如股票市场预测和投资组合规划，航空航天工程，微芯片设计，生物化学和分子生物学，以及机场和装配线的调度，车辆路径问题等。近年来，随着人工智能思潮的兴起，遗传算法在神经网络，图像处理，机器学习等方面亦得到广泛的使用。进化的力量几乎触及了人们所关注的任何领域，以无数种方式无形地塑造着我们周围的世界，并且随着研究的不断发展，新的用途将继续被发现。</p>
+<h3 id="3-遗传算法思想与特点"><a href="#3-遗传算法思想与特点" class="headerlink" title="3 遗传算法思想与特点"></a>3 遗传算法思想与特点</h3><p>遗传算法通过模拟自然界生物进化的过程来达到解决问题的方法。 在GA开始前必须定义个体的适应度函数，适应度函数是一种函数，它将问题的“候选解决方案”作为输入，并产生如何“适合”解决方案对于所考虑的问题的“好”程度。</p>
+<p>适应值的计算在GA中重复进行，因此计算速度应快，在大多数情况下，适应度函数和目标函数与目标是最大化或最小化给定目标函数是相同的。因此其适应度函数应具备以下特征 </p>
+<p>·        适应度函数应该计算足够快。</p>
+<p>·        它必须定量测量给定种群的拟合程度，以及从给定种群中生产个体的合适程度评价。</p>
+<p>在我们开始研究遗传算法之前，需要花一点时间来描述达尔文进化的三个核心原则，这些原则在我们实施模拟生物进化过程中也将是必需的。为了使自然选择在自然界中发生，必须存在所有这三个必要元素。 </p>
+<p><strong>遗传：</strong>后代必须有一个接收父母特征的程序。如果父代繁衍下一代，那么它们的特征会传递给下一代孩子。选择最适合的个体，将他们的基因传递给下一代。基于他们的适应度测评分数选择两对个体（父母），其中具有高适应性的个体有更多机会被选中进行繁殖下一代。</p>
+<p><strong>变异：</strong>群体中必须存在各种特征，或者是引入变异的手段，其包括交叉和突变两种变异。在没有任何人口变化的情况下，子代们将永远与父母相同。新的特征组合永远不会发生，任何事物都无法发展进化。交叉是遗传算法中最重要的阶段，对于要交配的每对父母，从基因内随机选择交叉点。突变是在形成的某些新后代中，它们的一些基因可以经历具有低随机概率的突变。</p>
+<p><strong>选择：</strong>必须有构建一种机制，通过这种机制，一些种群中只有部分后代可以遗传父代基因而存活下去，这被称为“适者生存”。自然选择的运作原则是某些特征更适合于该生物的环境，因此产生更大的生存和繁殖可能性。根据适应度比例选择是最常用的方式之一。在这个过程中，每个人都可以成为父母，其概率与其适应度成正比。因此，适应值有更高的机会将他们的特征遗传给下一代。因此，这种选择策略将选择压力应用于群体中更适合的个体，随着时间的推移发展出更好的个体。应该注意的保持人口的良好多样性对于GA的成功至关重要。</p>
+<p><strong>终止：</strong>遗传算法的终止条件对于确定GA运行何时结束非常重要。可以观察到，最初，GA进化得非常快，每隔几次迭代就会有更好的解决方案出现，但是在改进非常小的后期阶段，这往往会达到饱和状态。我们通常需要一个终止条件，以便解决方案在运行结束时达到最优解或者接近最优。</p>
+<p>·          当X迭代的种群中个体已经收敛没有改善时（不产生与前一代明显不同的后代）。</p>
+<p>·          当达到绝对的世代数（定义的迭代数）。</p>
+<p>·          当目标函数值达到某个预定义值。</p>
+<h3 id="4-遗传算法存在的问题与挑战"><a href="#4-遗传算法存在的问题与挑战" class="headerlink" title="4 遗传算法存在的问题与挑战"></a>4 遗传算法存在的问题与挑战</h3><p>遗传算法（GA）是一种可以模拟生物进化的计算机程序。GA已被证明是一种有效且有效的解决问题的策略，但它们并非万能的。其一定的局限性;  </p>
+<p>首先必须仔细考虑如何编写适应度函数的问题，以便可以获得更好的适应度，并且实际上等同于针对给定问题的更好解决方案。如果选择适应度函数或者不精确地定义适应度函数，遗传算法可能无法找到问题的解决方案，或者可能导致最终解决方案错误的情况出现。</p>
+<p>其次还必须谨慎选择GA的其他参数 如种群规模，突变率和交叉率，选择的类型和强度。如果种群规模太小，遗传算法可能无法搜索足够的解空间来找到好的解决方案。如果遗传变化率过高或选择方案选择不当，有益的模式可能会被破坏，种群个体可能会进入错误的进化轨道，变化太快，无法进行选择，从而导致收敛，无法找出最优的解决方案。</p>
+<p>GA可能出现的一个众所周知的问题被称为早熟收敛[1]。如果一个比大多数竞争对手更适合的个体在运行过程中早期出现，它可能会繁殖得太多，以至于过早降低了人口的多样性，导致算法收敛于该个体代表的局部最优值而不是彻底搜索健身景观以找到全局最优。这在小群体中是特别常见的问题，即使繁殖率的偶然变化也可能导致一种基因型变得优于其他基因型。</p>
+<p>GA算法虽然是模拟生物进化的过程，但是不能完全模拟自然界的生物进化。</p>
+<p>l  由于遗传算法的“特质（表现型性状）”只能是定量的，因此可以选择任何朝向目标的进化。但是自然界许多生物学特征是定性的，是无目的的，其表现形可能有用也可能无用。</p>
+<p>l  GA只能选择非常有限的特征。自然生物界选择的特征都是无法计数的，不能完全模拟各个性状，选择必须对影响生存的所有特征进行操作。</p>
+<p>l  在真实生物体中，突变发生在整个基因组中，而不仅仅是指定特定性状的基因或部分。这意味着必须消除对其他性状的所有有害变化，同时选择所选性状中罕见的所需变化。在GA中忽略了这一点。使用遗传算法，程序本身可以防止突变，然而，生物体的繁殖机制是不受突变的保护。</p>
+<p>l  生物个体的性状是由多种基因共同控制的，以及一种基因可能影响多种性状，这个在GA中无法体现。</p>
+<p>l  GA的结果是“预定义值”。而自然生物进化是无目的的。</p>
+<h3 id="5-遗传算法未来研究方向"><a href="#5-遗传算法未来研究方向" class="headerlink" title="5 遗传算法未来研究方向"></a>5 遗传算法未来研究方向</h3><p>目前遗传算法有待突破现有桎梏。GA来源于进化论，模拟生物进化，但是却未能做到很好的模拟自然界，首先做到与自然进化的相互渗透。能够与目前起兴的机器学习，人工智能，神经网络等智能算法进行相互结合，扬长避短，推进新一代智能计算结构的构造。</p>
+<p>其次，能都对GA算法编码方式进行改变，能够引进弥补与自然界生物DNA的趋同化，做到一种基因能够影响多种表现型性状，以及个体的一种表现型可有多种基因型决定，以此希望能够改善遗传算法的对于容易陷入局部最优解和最优解决方案的收敛速度过慢而导致的效率过低问题。</p>
+<p>最后，当种群规模过大导致的解空间足够大时，处理的数据过多时，能够预处理删除适应度较差的冗余个体，以达到提升GA算法路径规划的速率。</p>
+<h3 id="6-结束语"><a href="#6-结束语" class="headerlink" title="6 结束语"></a>6 结束语</h3><p>遗传算法经历几十年的长足发展，各方面已经趋于稳定，在社会的各行各业取得了广泛的应用，未来需对其进行分析改进，弥补目前遗传算法存在的问题，如能做到趋同于模拟自然界生物进化，未来GA毕将具有更为广泛的应用空间。</p>
+<center> <b><br>     参考文献<br>    </b> </center> 
+
+<p>[1] 孙增圻，邓志东，张再兴.智能控制理论与技术[M]，北京：清华大学出版社，2011：346-353.</p>
+<p>[2] 遗传算法求解TSP的研究[D]. 喻菡.西南交通大学 2006</p>
+<p>[3] 遗传算法与蚁群算法的改进融合[J]. 陈亚云,韩文涛,崔鹤平.  中国农机化学报. 2014(04)</p>
+<p>[4] 多资源约束的车辆调度问题的改进遗传算法[J]. 张玉,贾遂民.  计算机工程与应用. 2016(07)</p>
+<p>[5] J. H., Holland (1995). Hidden Order: How Adaptation Builds Complexity Addison-Wesley, Redwood City, CA..</p>
+<p>[6] Fonseca, Carlos and Peter Fleming. “An overview of evolutionary algorithms in multiobjective optimization.” <em>Evolutionary Computation</em>, vol.3, no.1, p.1-16 (1995).</p>
+<p>[7] Kirkpatrick, S., C.D. Gelatt and M.P. Vecchi. “Optimization by simulated annealing.” <em>Science</em>, vol.220, p.671-678 (1983).</p>
+<p>[8] Mitchell, Melanie. <em>An Introduction to Genetic Algorithms.</em> MIT Press, 1996. Forrest 1993，p.876; Mitchell 1996，p.167</p>
+<p>[9] Hybridizing ant colony optimization via genetic algorithm for mixed-model assembly line balancing problem with sequence dependent setup times between tasks[J] . Sener Akp?nar,G. Mirac Bayhan,Adil Baykasoglu.  Applied Soft Computing Journal . 2013 (1)</p>
+
+      
+    </div>
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+          
+            
+          
+    </div>
+    
+
+    
+       
+    
+    
+
+    
+
+	
+
+	
+      
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat.jpg" alt="muzhi WeChat Pay">
+          
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/aipay.jpg" alt="muzhi Alipay">
+          
+        </div>
+      
+    </div>
+  </div>
+
+      
+	
+	
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/课程/" rel="tag"><i class="fa fa-tag"></i>课程</a>
+          
+            <a href="/tags/模式识别/" rel="tag"><i class="fa fa-tag"></i>模式识别</a>
+          
+            <a href="/tags/遗传算法/" rel="tag"><i class="fa fa-tag"></i>遗传算法</a>
+          
+        </div>
+      
+
+	 
+	  
+	  <div>    
+	 
+	 
+	<ul class="post-copyright">
+	  <li class="post-copyright-author">
+		  <strong>本文作者：</strong>muzhi
+	  </li>
+	  <li class="post-copyright-link">
+		<strong>本文链接：</strong>
+		<a href="/post/7eca10d9.html" title="模式识别原理与技术">post/7eca10d9.html</a>
+	  </li>
+	  <li class="post-copyright-license">
+		<strong>版权： </strong>
+		本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+	  </li>
+	</ul>
+	
+</div>
+	  
+	  
+	  
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/4a17b156.html" rel="prev" title="Hello World">
+                 <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/3b4c1ddc.html" rel="next" title="最优化方法及其应用">
+                最优化方法及其应用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+            <a href="/">
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="muzhi">
+            </a>
+            
+              <p class="site-author-name" itemprop="name">muzhi</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/muzhi621" title="GitHub &rarr; https://github.com/muzhi621" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="/muzhi621@qq.com" title="E-Mail &rarr; muzhi621@qq.com"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://plus.google.com/u/0/discover" title="Google &rarr; https://plus.google.com/u/0/discover" rel="noopener" target="_blank"><i class="fa fa-fw fa-google"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/muzhi621" title="Twitter &rarr; https://twitter.com/muzhi621" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://www.facebook.com/wu.li.50767984" title="FB Page &rarr; https://www.facebook.com/wu.li.50767984" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://yun.myliwu.work/" title="cloud &rarr; https://yun.myliwu.work/" rel="noopener" target="_blank"><i class="fa fa-fw fa-cloud"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#遗传算法综述"><span class="nav-number">1.</span> <span class="nav-text">遗传算法综述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-引言"><span class="nav-number">1.1.</span> <span class="nav-text">1 引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-遗传算法研究现状分析"><span class="nav-number">1.2.</span> <span class="nav-text">2 遗传算法研究现状分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-遗传算法思想与特点"><span class="nav-number">1.3.</span> <span class="nav-text">3 遗传算法思想与特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-遗传算法存在的问题与挑战"><span class="nav-number">1.4.</span> <span class="nav-text">4 遗传算法存在的问题与挑战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-遗传算法未来研究方向"><span class="nav-number">1.5.</span> <span class="nav-text">5 遗传算法未来研究方向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-结束语"><span class="nav-number">1.6.</span> <span class="nav-text">6 结束语</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">muzhi</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.6.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+	
+	<!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("tmgi5flcivKhpIBXWilCWMUG-gzGzoHsz", "kWQIjXvby0t9A17SXq4P4Gxc");</script>
+<script>
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+	$(".leancloud_visitors").each(function() {
+		var url = $(this).attr("id").trim();
+		query.equalTo("url", url);
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {
+					var content = '0 ' + $(document.getElementById(url)).text();
+					$(document.getElementById(url)).text(content);
+					return;
+				}
+				for (var i = 0; i < results.length; i++) {
+					var object = results[i];
+					var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+					$(document.getElementById(url)).text(content);
+				}
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+
+	});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else if ($('.post-title-link').length > 1) {
+		showTime(Counter);
+	}
+}); 
+</script>
+	
+	
+	
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'rIOXeftjd0ODtxrjVCPeYhMQ-gzGzoHsz',
+        appKey: 'k4OQq3C7OdQRIWohmIWBb5Fd',
+        placeholder: '想说点啥？🐎',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

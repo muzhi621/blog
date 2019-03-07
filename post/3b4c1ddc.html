@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#fff">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 1px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "b6d6acce"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="https://fonts.cat.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#fff">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="引言在社会生产以及日常生活中，尤其是经济活动中，通常情况下，做一个决策对策备选方案往往不止一个，则自然你希望所选方案为最佳的，而最优化方法就是从众多可能的方案中选择一个可以达到最优目标的科学，是一门新兴的数学分支。因而最优化方法和最优化理论日趋受到重视，其在社会生活生产中已经渗透到社会中方方面面，包括经济，军事，管理等领域。而伴随着计算机科学的发展，解决最优化方法的工具也日趋完善，MATLAB就是">
+<meta name="keywords" content="最优化,matlab,课程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最优化方法及其应用">
+<meta property="og:url" content="https://myliwu.work/post/3b4c1ddc.html">
+<meta property="og:site_name" content="Liwu&#39;s blog">
+<meta property="og:description" content="引言在社会生产以及日常生活中，尤其是经济活动中，通常情况下，做一个决策对策备选方案往往不止一个，则自然你希望所选方案为最佳的，而最优化方法就是从众多可能的方案中选择一个可以达到最优目标的科学，是一门新兴的数学分支。因而最优化方法和最优化理论日趋受到重视，其在社会生活生产中已经渗透到社会中方方面面，包括经济，军事，管理等领域。而伴随着计算机科学的发展，解决最优化方法的工具也日趋完善，MATLAB就是">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-06T05:04:59.776Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="最优化方法及其应用">
+<meta name="twitter:description" content="引言在社会生产以及日常生活中，尤其是经济活动中，通常情况下，做一个决策对策备选方案往往不止一个，则自然你希望所选方案为最佳的，而最优化方法就是从众多可能的方案中选择一个可以达到最优目标的科学，是一门新兴的数学分支。因而最优化方法和最优化理论日趋受到重视，其在社会生活生产中已经渗透到社会中方方面面，包括经济，军事，管理等领域。而伴随着计算机科学的发展，解决最优化方法的工具也日趋完善，MATLAB就是">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Liwu's blog" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://myliwu.work/post/3b4c1ddc.html">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>最优化方法及其应用 | Liwu's blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Liwu's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Simple Notes</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-futbol-o"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-reading">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/reading/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>读书/观影</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://myliwu.work/post/3b4c1ddc.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="muzhi">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Liwu's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">最优化方法及其应用
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 12:30:25 / 修改时间：13:04:59" itemprop="dateCreated datePublished" datetime="2019-03-06T12:30:25+08:00">2019-03-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/论文/" itemprop="url" rel="index"><span itemprop="name">论文</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/post/3b4c1ddc.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/post/3b4c1ddc.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/post/3b4c1ddc.html" class="leancloud_visitors" data-flag-title="最优化方法及其应用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在社会生产以及日常生活中，尤其是经济活动中，通常情况下，做一个决策对策备选方案往往不止一个，则自然你希望所选方案为最佳的，而最优化方法就是从众多可能的方案中选择一个可以达到最优目标的科学，是一门新兴的数学分支。因而最优化方法和最优化理论日趋受到重视，其在社会生活生产中已经渗透到社会中方方面面，包括经济，军事，管理等领域。而伴随着计算机科学的发展，解决最优化方法的工具也日趋完善，MATLAB就是其中最具代表性的最优化工具之一。</p>
+<h2 id="1-提出问题"><a href="#1-提出问题" class="headerlink" title="1.  提出问题"></a>1.  提出问题</h2><p>某商店拟制定某种商品 7-12月的进货，售货计划，已知商品仓库的最大容量为1500件，6月底已存货300件，年底库存不少于300件为宜，以后每个月初进货一次，假设各月份该商品买进，售出单价如下表，若每月的库存费为0.5元，问各月进货，售货各为多少件时，才能使收益最多，试建立数学模型并求解。</p>
+<p>表1</p>
+<table>
+<thead>
+<tr>
+<th>月份</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>买进（元/件）</td>
+<td>28</td>
+<td>26</td>
+<td>25</td>
+<td>27</td>
+<td>24</td>
+<td>23.5</td>
+</tr>
+<tr>
+<td>售出（元/件）</td>
+<td>29</td>
+<td>27</td>
+<td>26</td>
+<td>28</td>
+<td>25</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+<p><strong>问题来源：</strong>AllExperiments__《数学建模实验》上机实验作业—张勇 </p>
+<p>实验二 优化模型实验 题目3</p>
+<p><a href="https://wenku.baidu.com/view/8f56f49dbed5b9f3f90f1cec.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/8f56f49dbed5b9f3f90f1cec.html</a></p>
+<h2 id="2-分析问题"><a href="#2-分析问题" class="headerlink" title="2.  分析问题"></a>2.  分析问题</h2><p>此问题提出主要解决实际问题中的线性规划中的销售计划问题，在实际生产生活中经常会涉及的一个问题。为使得利润最大化，商人不得不通过合理的买进售出的规划，同时在考虑影响不可消除的成本下，通过合理的规划销售方案使得商品的销售计划达到利润的最大化。解决此类问题主要是通过分析问题，提炼出线性规划模型，然后利用MATLAB工具箱中的linprog函数解决。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">MATLAB****中线性规划标准型：**</span><br><span class="line"></span><br><span class="line">Min fTx</span><br><span class="line"></span><br><span class="line">S.t. Ax&lt;=0</span><br><span class="line"></span><br><span class="line">Aeq·x=beq</span><br><span class="line"></span><br><span class="line">Lb&lt;=x&lt;=ub</span><br></pre></td></tr></table></figure>
+<p><strong>linprog**</strong>函数：**</p>
+<p>linprog函数主要用来求解现行规划问题，主要使用方法如下：</p>
+<p>注意：</p>
+<p>l  目标函数f要写成列矩阵的形式</p>
+<p>l  约束要写成&lt;= 的形式</p>
+<p>l  函数是为求最小值设置的</p>
+<p>调用格式：</p>
+<p>x=linprog(f,A,b,Aeq,beq); 求解问题min f<em>x，约束条件为A</em>x&lt;=b。</p>
+<p>x=linprog(f,A,b,Aeq,beq,lb,ub); 求解上面的问题，但增加等式约束，即Aeq*x=beq。若没有不等式存在，则令A=[ ],b=[ ]。</p>
+<p>x=linprog(f,A,b,Aeq,beq,lb,ub,x0); 设置初值为x0.该选项只使用于中型问题，默认时，算法将忽略初值。</p>
+<p>x=linprog(f,A,b,Aeq,beq,lb,ub,x0,options); 用options指定的优化参数进行最小化。</p>
+<p>[x,fval] = linprog(f,A,b,Aeq,beq,lb,ub)</p>
+<p>[x,fval,exitflag,output，lambda]= linprog(f,A,b,Aeq,beq,lb,ub)</p>
+<p>l  返回解x处的目标函数值fval。</p>
+<p>l  返回exitflag值，描述函数计算的退出条件。</p>
+<p>l  返回包含优化信息的输出变量output。</p>
+<p>l  lambda参数是解x处的拉格朗日乘子。</p>
+<p>其中：</p>
+<p>Ø  x返回的是决策向量的取值；</p>
+<p>Ø  fval返回的是目标函数的最优值;</p>
+<p>Ø  f为价值向量（目标函数）;</p>
+<p>Ø  A和b对应的是线性不等式约束;</p>
+<p>Ø  Aeq和beq对应的是线性等式约束;</p>
+<p>Ø  lb和ub分别对应决策的下界向量和上界向量;</p>
+<p><strong>线性规划：</strong></p>
+<p>现实问题求解最优化问题，就是在一定条件下达到利益最大化的目的。此问题集使得月利润最大，其中需考虑进货，仓储成本以及售出量所决定的利益，以此找到一个最优解使得例如能最大化。由题目问题可得，该问题属于线性规划问题，目标函数可是该商店的纯利润表达式，约束条件是现实问题中，对于利润最大化的限制，例如仓储容量，买进售出量，仓储成本。</p>
+<p>还需考虑到问题是：</p>
+<p>l  该商品在6-12月每个月中买进售出的价格不随时间变化。</p>
+<p>l  每月月初计算库存费用为买进的商品量加上库存量。</p>
+<p>l  不考虑除了仓储成本以及买进该商品的成本外其他影响最终利润的费用支出，诸如人力成本等。</p>
+<h2 id="3-建立模型"><a href="#3-建立模型" class="headerlink" title="3.  建立模型"></a>3.  建立模型</h2><p>根据线性规划的原理和方法，结合题目具体要求，构建适合的数学模型。</p>
+<p>(1) 确定目标函数</p>
+<p>设7-12月每个月的该商品的买进量和售出量如下表二所示</p>
+<p>设7-12月实际买进售出</p>
+<p>表2</p>
+<table>
+<thead>
+<tr>
+<th>月份</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>买进</td>
+<td>X11</td>
+<td>X12</td>
+<td>X13</td>
+<td>X14</td>
+<td>X15</td>
+<td>X16</td>
+</tr>
+<tr>
+<td>售出</td>
+<td>X21</td>
+<td>X22</td>
+<td>X23</td>
+<td>X24</td>
+<td>X25</td>
+<td>X26</td>
+</tr>
+</tbody>
+</table>
+<p>由题目可得，该商品6月底已存货量为300件，所以得出7-12月月初的库存量如下所示：</p>
+<p>表3</p>
+<table>
+<thead>
+<tr>
+<th>月份</th>
+<th>库存</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td>300+X11</td>
+</tr>
+<tr>
+<td>8</td>
+<td>300+X11-X21+X12</td>
+</tr>
+<tr>
+<td>9</td>
+<td>300+X11-X21+X12-X22+X13</td>
+</tr>
+<tr>
+<td>10</td>
+<td>300+X11-X21+X12-X22+X13-X23+X14</td>
+</tr>
+<tr>
+<td>11</td>
+<td>300+X11-X21+X12-X22+X13-X23+X14-X24+X15</td>
+</tr>
+<tr>
+<td>12</td>
+<td>300+X11-X21+X12-X22+X13-X23+X14-X24+X15-X25+X16</td>
+</tr>
+<tr>
+<td>12月底</td>
+<td>300+X11-X21+X12-X22+X13-X23+X14-X24+X15-X25+X16-X26</td>
+</tr>
+</tbody>
+</table>
+<p>为使得该商品的利润达到做大化，利润可简化为：</p>
+<p>​     利润=销售利润-仓储成本-买进成本<br>$$<br>目标函数：</p>
+<p>Max F=29X21-28X11+27X22-26X12+26X23-25X13+28X24-27X14+25X25-</p>
+<p>24X15+25X26-23.5X16-0.5(300+X11+300+X11-X21+X12+300+X11-X21+X12-X22+X13+300+X11-X21+X12-X22+X13-X23+X14+300+X11-X21+X12-X22+X13-X23+X14-X24+X15+300+X11-X21+X12-X22+X13-X23+X14-X24+X15)</p>
+<p>化简Max F’=31.5X21-31X11+29X22-28.5X12+27.5X23-27X13+</p>
+<p>29X24-28.5X14+25.5X25-25X15+25X26-24X16-900<br>$$</p>
+<p>(2) 确定约束条件</p>
+<p>约束条件<br>$$<br>s.t.：</p>
+<p>1)  商品仓库的最大容量为1500件</p>
+<p>0&lt;=300+X11&lt;=1500</p>
+<p>0&lt;=300+X11-X21+X12&lt;=1500</p>
+<p>0&lt;=300+X11-X21+X12-X22+X13&lt;=1500</p>
+<p>0&lt;=300+X11-X21+X12-X22+X13-X23+X14&lt;=1500</p>
+<p>0&lt;=300+X11-X21+X12-X22+X13-X23+X14-X24+X15&lt;=1500</p>
+<p>0&lt;=300+X11-X21+X12-X22+X13-X23+X14-X24+X15-X25+X16&lt;=1500</p>
+<p>2)  年底库存不少于300件</p>
+<p>300+X11-X21+X12-X22+X13-X23+X14-X24+X15-X25+X16-X26&gt;=300</p>
+<p>3)  买进和售出该商品不为负</p>
+<p>X11 X21 …… X16 X26&gt;=0<br>$$</p>
+<p>(3) 建立线性规划模型<br>$$<br>Min C=31X11-31.5X21+28.5X12-29X22+27X13-27.5X23+</p>
+<p>28.5X14-29X24+25X15-25.5X25+24X16-25X26+900<br>$$<br>构建解决模型：<br>$$<br>Min C’=31X11-31.5X21+28.5X12-29X22+27X13-27.5X23+</p>
+<p>28.5X14-29X24+25X15-25.5X25+24X16-25X26</p>
+<p>s.t.</p>
+<p>X11&lt;=1200</p>
+<p>-X11+X21&lt;=300</p>
+<p>X11-X21+X12&lt;=1200</p>
+<p>-X11+X21-X12+X22&lt;=300</p>
+<p>X11-X21+X12-X22+X13&lt;=1200</p>
+<p>-X11+X21-X12+X22-X13+X23&lt;=300</p>
+<p>X11-X21+X12-X22+X13-X23+X14&lt;=1200</p>
+<p>-X11+X21-X12+X22-X13+X23-X14+X24&lt;=300</p>
+<p>X11-X21+X12-X22+X13-X23+X14-X24+X15&lt;=1200</p>
+<p>-X11+X21-X12+X22-X13+X23-X14+X24-X15+X25&lt;=300</p>
+<p>X11-X21+X12-X22+X13-X23+X14-X24+X15-X25+X16&lt;=1200</p>
+<p>-X11+X21-X12+X22-X13+X23-X14+X24-X15+X25-X16+X26&lt;=0</p>
+<p>-X11 -X21 …… -X16 -x26&lt;=0<br>$$</p>
+<h2 id="4-问题求解"><a href="#4-问题求解" class="headerlink" title="4. 问题求解"></a>4. 问题求解</h2><p>采用调用工具箱法和修正单纯性函数法求解，见附录</p>
+<p>求解可得：xm为：</p>
+<p>$$<br>1200.00000000000</p>
+<p>1500.00000000000</p>
+<p>1499.99999999999</p>
+<p>1500.00000000000</p>
+<p>1500.00000000000</p>
+<p>3.32426374296570e-12</p>
+<p>5.04039389707337e-12</p>
+<p>1500.00000000000</p>
+<p>1500.00000000000</p>
+<p>1499.99999999999</p>
+<p>1500.00000000000</p>
+<p>1200.00000000000<br>$$</p>
+<p>$$<br>Fm=-8.549999999999593e+03</p>
+<p>C’=fm=-8550</p>
+<p>C=C’+900=-8550+900=-7650</p>
+<p>利润：Max F=-C=7550<br>$$<br>所以7-12月该商品买进售出计划如下表</p>
+<p>表4</p>
+<table>
+<thead>
+<tr>
+<th>月份</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>买进（件）</td>
+<td>1200</td>
+<td>1500</td>
+<td>1500</td>
+<td>0</td>
+<td>1500</td>
+<td>1500</td>
+</tr>
+<tr>
+<td>售出（件）</td>
+<td>1500</td>
+<td>1500</td>
+<td>0</td>
+<td>1500</td>
+<td>1500</td>
+<td>1200</td>
+</tr>
+</tbody>
+</table>
+<p>所以该商店出售该商品最大的利润为7550元</p>
+<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5.  总结"></a>5.  总结</h2><p>学习本门最优化课程，收获颇多。在此之前，对于MATLAB这个软件从来都是只闻其名，不见其身，本以为计算机专业学生来使用MATLAB应该上手极快应是，但是结果并不是想象中的那样美好，不过当学习这软件后才发现软件的强大，可以解决许多问题，特别是对于图像图形的绘制，解决了很多感触，最优化问题归根到底还是数学问题，以前学习数学，基本是用不上的，久而久之，会产生一种数学无用论，这之后Vai发现不是数学无用，而是自己学的不够，刚开始数学基本以往，特意回去翻了翻数学书，补回来，后来同期数值分析开课，刚好相应互补，其次数学不学好，对于计算机影响也是很大的，最后老师的教诲也是受益匪浅，都说家有一老，如有一宝，老师丰富的阅历，包括我们在研究生期间对于文献的阅读等，都给出了避免我们走重复路的可能，而且上课方式也大有不同，以此讲课对于学生也是一种锻炼，一种表述能力的锻炼，但是同时学生讲的有事不够透彻，还好中间老师补种了这种缺陷。在此，对老师说声，谢谢您，也祝您此次英国之行一路顺风。</p>
+<h2 id="6-附录"><a href="#6-附录" class="headerlink" title="6.  附录"></a>6.  附录</h2><p><strong>调用工具箱法：</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">zuiyouhua.m**</span><br><span class="line"></span><br><span class="line">f=[<span class="number">31</span>,<span class="number">-31.5</span>,<span class="number">28.5</span>,<span class="number">-29</span>,<span class="number">27</span>,<span class="number">-27.5</span>,<span class="number">28.5</span>,<span class="number">-29</span>,<span class="number">25</span>,<span class="number">-25.5</span>,<span class="number">24</span>,<span class="number">-25</span>];</span><br><span class="line"></span><br><span class="line">A=[ <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">​    ];</span><br><span class="line">b=[<span class="number">1200</span>;<span class="number">300</span>;<span class="number">1200</span>;<span class="number">300</span>;<span class="number">1200</span>;<span class="number">300</span>;<span class="number">1200</span>;<span class="number">300</span>;<span class="number">1200</span>;<span class="number">300</span>;<span class="number">1200</span>;<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">lb=[<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">[xm,fval,exitflag,output,lambda]=linprog(f,A,b,[],[],lb);</span><br></pre></td></tr></table></figure>
+<p><strong>单纯形函数法：</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br></pre></td><td class="code"><pre><span class="line">ModifSimpleMthd.m**</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span>  <span class="params">[x,minf]</span> = <span class="title">ModifSimpleMthd</span><span class="params">(A,c,b,baseVector)</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">% A:约束矩阵</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% c:目标函数系数矩阵</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% b:约束右端向量</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% baseVector:初始基向量</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% x:目标函数取最小值时的自变量的值</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% minf:目标函数最小值</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">sz = <span class="built_in">size</span>(A);</span><br><span class="line"></span><br><span class="line">nVia = sz(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">n = sz(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">xx = <span class="number">1</span>:nVia;</span><br><span class="line"></span><br><span class="line">nobase = <span class="built_in">zeros</span>(<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">m = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> c&gt;=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">​    vr = <span class="built_in">find</span>(c~=<span class="number">0</span> ,<span class="number">1</span>,<span class="string">'last'</span>);</span><br><span class="line"></span><br><span class="line">​    rgv = inv(A(:,(nVia-n+<span class="number">1</span>):nVia))*b;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">if</span> rgv &gt;=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">​        x = <span class="built_in">zeros</span>(<span class="number">1</span>,vr);</span><br><span class="line"></span><br><span class="line">​        minf = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">else</span></span><br><span class="line"></span><br><span class="line">​        <span class="built_in">disp</span>(<span class="string">'不存在最优解!'</span>);</span><br><span class="line"></span><br><span class="line">​        x = NaN;</span><br><span class="line"></span><br><span class="line">​        minf = NaN;</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:nVia</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">if</span>(<span class="built_in">isempty</span>(<span class="built_in">find</span>(baseVector == xx(<span class="built_in">i</span>),<span class="number">1</span>)))</span><br><span class="line"></span><br><span class="line">​        nobase(m) = <span class="built_in">i</span>;</span><br><span class="line"></span><br><span class="line">​        m = m + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">else</span></span><br><span class="line"></span><br><span class="line">​        </span><br><span class="line"></span><br><span class="line">​    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">bCon = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">M = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">B = A(:,baseVector);</span><br><span class="line"></span><br><span class="line">invB = inv(B);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> bCon</span><br><span class="line"></span><br><span class="line">​    nB = A(:,nobase);</span><br><span class="line"></span><br><span class="line">​    ncb = c(nobase);</span><br><span class="line"></span><br><span class="line">​    B = A(:,baseVector);</span><br><span class="line"></span><br><span class="line">​    cb = c(baseVector);</span><br><span class="line"></span><br><span class="line">​    xb = invB*b;</span><br><span class="line"></span><br><span class="line">​    f = cb*xb;</span><br><span class="line"></span><br><span class="line">​    w = cb*invB;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">​    <span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="built_in">length</span>(nobase)</span><br><span class="line"></span><br><span class="line">​        sigma(<span class="built_in">i</span>) = w*nB(:,<span class="built_in">i</span>)-ncb(<span class="built_in">i</span>);</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">​    [maxs,ind] = <span class="built_in">max</span>(sigma);</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">if</span> maxs &lt;= <span class="number">0</span></span><br><span class="line"></span><br><span class="line">​        minf = cb*xb;</span><br><span class="line"></span><br><span class="line">​        vr = <span class="built_in">find</span>(c~=<span class="number">0</span> ,<span class="number">1</span>,<span class="string">'last'</span>);</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">for</span> l=<span class="number">1</span>:vr</span><br><span class="line"></span><br><span class="line">​            <span class="keyword">for</span> t=<span class="number">1</span>:<span class="built_in">length</span>(baseVector)</span><br><span class="line"></span><br><span class="line">​                <span class="keyword">if</span>(baseVector(t)==l)</span><br><span class="line"></span><br><span class="line">​                    x(l)=xb(t);</span><br><span class="line"></span><br><span class="line">​                <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">​            <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">​        <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">​        bCon = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">else</span></span><br><span class="line"></span><br><span class="line">​        y = inv(B)*A(:,nobase(ind));</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">if</span> y &lt;= <span class="number">0</span></span><br><span class="line"></span><br><span class="line">​            <span class="built_in">disp</span>(<span class="string">'No solution!'</span>);</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">else</span></span><br><span class="line"></span><br><span class="line">​            minb = <span class="built_in">inf</span>;</span><br><span class="line"></span><br><span class="line">​            chagB = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​            <span class="keyword">for</span> <span class="built_in">j</span>=<span class="number">1</span>:<span class="built_in">length</span>(y)</span><br><span class="line"></span><br><span class="line">​                <span class="keyword">if</span> y(<span class="built_in">j</span>)&gt;<span class="number">0</span></span><br><span class="line"></span><br><span class="line">​                    bz = xb(<span class="built_in">j</span>)/y(<span class="built_in">j</span>);</span><br><span class="line"></span><br><span class="line">​                    <span class="keyword">if</span> bz&lt;minb</span><br><span class="line"></span><br><span class="line">​                        minb = bz;</span><br><span class="line"></span><br><span class="line">​                        chagB = <span class="built_in">j</span>;</span><br><span class="line"></span><br><span class="line">​                    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">​                <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">​            <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">​            tmp = baseVector(chagB);</span><br><span class="line"></span><br><span class="line">​            baseVector(chagB) = nobase(ind);</span><br><span class="line"></span><br><span class="line">​            nobase(ind) = tmp;</span><br><span class="line"></span><br><span class="line">​              </span><br><span class="line"></span><br><span class="line">​            <span class="keyword">for</span> <span class="built_in">j</span>=<span class="number">1</span>:chagB<span class="number">-1</span></span><br><span class="line"></span><br><span class="line">​                <span class="keyword">if</span> y(<span class="built_in">j</span>) ~=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">​                    invB(<span class="built_in">j</span>,:) = invB(<span class="built_in">j</span>,:) - invB(chagB,:)*y(<span class="built_in">j</span>)/y(chagB);</span><br><span class="line"></span><br><span class="line">​                <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">​            <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">​            <span class="keyword">for</span> <span class="built_in">j</span>=chagB+<span class="number">1</span>:<span class="built_in">length</span>(y)</span><br><span class="line"></span><br><span class="line">​                <span class="keyword">if</span> y(<span class="built_in">j</span>) ~=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">​                    invB(<span class="built_in">j</span>,:) = invB(<span class="built_in">j</span>,:) - invB(chagB,:)*y(<span class="built_in">j</span>)/y(chagB);</span><br><span class="line"></span><br><span class="line">​                <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">​            <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">​            invB(chagB,:) =invB(chagB,:)/y(chagB);</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">​    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">​    M = M + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">if</span> (M == <span class="number">1000000</span>)</span><br><span class="line"></span><br><span class="line">​        <span class="built_in">disp</span>(<span class="string">'找不到最优解'</span>);</span><br><span class="line"></span><br><span class="line">​        x = NaN;</span><br><span class="line"></span><br><span class="line">​        minf = NaN;</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"> **main.m**</span><br><span class="line"></span><br><span class="line">c=[<span class="number">31</span>,<span class="number">-31.5</span>,<span class="number">28.5</span>,<span class="number">-29</span>,<span class="number">27</span>,<span class="number">-27.5</span>,<span class="number">29.5</span>,<span class="number">-29</span>,<span class="number">25</span>,<span class="number">-25.5</span>,<span class="number">24</span>,<span class="number">-25</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">A=[ <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>, <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span> <span class="number">-1</span> <span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span></span><br><span class="line"></span><br><span class="line">​    ];</span><br><span class="line"></span><br><span class="line">b=[<span class="number">1200</span>;<span class="number">300</span>;<span class="number">1200</span>;<span class="number">300</span>;<span class="number">1200</span>;<span class="number">300</span>;<span class="number">1200</span>;<span class="number">300</span>;<span class="number">1200</span>;<span class="number">300</span>;<span class="number">1200</span>;<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line"> [x,minf] = ModifSimpleMthd(A,c,b,[<span class="number">13</span> <span class="number">14</span> <span class="number">15</span> <span class="number">16</span> <span class="number">17</span> <span class="number">18</span> <span class="number">19</span> <span class="number">20</span> <span class="number">21</span> <span class="number">22</span> <span class="number">23</span> <span class="number">24</span>]);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+          
+            
+          
+    </div>
+    
+
+    
+       
+    
+    
+
+    
+
+	
+
+	
+      
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat.jpg" alt="muzhi WeChat Pay">
+          
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/aipay.jpg" alt="muzhi Alipay">
+          
+        </div>
+      
+    </div>
+  </div>
+
+      
+	
+	
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/最优化/" rel="tag"><i class="fa fa-tag"></i>最优化</a>
+          
+            <a href="/tags/matlab/" rel="tag"><i class="fa fa-tag"></i>matlab</a>
+          
+            <a href="/tags/课程/" rel="tag"><i class="fa fa-tag"></i>课程</a>
+          
+        </div>
+      
+
+	 
+	  
+	  <div>    
+	 
+	 
+	<ul class="post-copyright">
+	  <li class="post-copyright-author">
+		  <strong>本文作者：</strong>muzhi
+	  </li>
+	  <li class="post-copyright-link">
+		<strong>本文链接：</strong>
+		<a href="/post/3b4c1ddc.html" title="最优化方法及其应用">post/3b4c1ddc.html</a>
+	  </li>
+	  <li class="post-copyright-license">
+		<strong>版权： </strong>
+		本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+	  </li>
+	</ul>
+	
+</div>
+	  
+	  
+	  
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/7eca10d9.html" rel="prev" title="模式识别原理与技术">
+                 <i class="fa fa-chevron-left"></i> 模式识别原理与技术
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/9daba997.html" rel="next" title="测试">
+                测试 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+            <a href="/">
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="muzhi">
+            </a>
+            
+              <p class="site-author-name" itemprop="name">muzhi</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/muzhi621" title="GitHub &rarr; https://github.com/muzhi621" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="/muzhi621@qq.com" title="E-Mail &rarr; muzhi621@qq.com"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://plus.google.com/u/0/discover" title="Google &rarr; https://plus.google.com/u/0/discover" rel="noopener" target="_blank"><i class="fa fa-fw fa-google"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/muzhi621" title="Twitter &rarr; https://twitter.com/muzhi621" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://www.facebook.com/wu.li.50767984" title="FB Page &rarr; https://www.facebook.com/wu.li.50767984" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://yun.myliwu.work/" title="cloud &rarr; https://yun.myliwu.work/" rel="noopener" target="_blank"><i class="fa fa-fw fa-cloud"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-提出问题"><span class="nav-number">2.</span> <span class="nav-text">1.  提出问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-分析问题"><span class="nav-number">3.</span> <span class="nav-text">2.  分析问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-建立模型"><span class="nav-number">4.</span> <span class="nav-text">3.  建立模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-问题求解"><span class="nav-number">5.</span> <span class="nav-text">4. 问题求解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-总结"><span class="nav-number">6.</span> <span class="nav-text">5.  总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-附录"><span class="nav-number">7.</span> <span class="nav-text">6.  附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">muzhi</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.6.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+	
+	<!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("tmgi5flcivKhpIBXWilCWMUG-gzGzoHsz", "kWQIjXvby0t9A17SXq4P4Gxc");</script>
+<script>
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+	$(".leancloud_visitors").each(function() {
+		var url = $(this).attr("id").trim();
+		query.equalTo("url", url);
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {
+					var content = '0 ' + $(document.getElementById(url)).text();
+					$(document.getElementById(url)).text(content);
+					return;
+				}
+				for (var i = 0; i < results.length; i++) {
+					var object = results[i];
+					var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+					$(document.getElementById(url)).text(content);
+				}
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+
+	});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else if ($('.post-title-link').length > 1) {
+		showTime(Counter);
+	}
+}); 
+</script>
+	
+	
+	
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'rIOXeftjd0ODtxrjVCPeYhMQ-gzGzoHsz',
+        appKey: 'k4OQq3C7OdQRIWohmIWBb5Fd',
+        placeholder: '想说点啥？🐎',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
