@@ -3,20 +3,28 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
+title: Liwu's blog
+subtitle: Simple Notes
 description:
 keywords:
-author: John Doe
-language:
+author: muzhi
+language: zh-CN
 timezone:
+
+
+
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://myliwu.work
 root: /
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+#permalink: :category/:year/:month/:day/:title.html
+#permalink_defaults:
+
+permalink: post/:abbrlink.html
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  rep: hex    # 进制：dec(default) and hex
 
 # Directory
 source_dir: source
@@ -26,7 +34,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: 
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -44,7 +52,13 @@ highlight:
   auto_detect: false
   tab_replace:
   
-# Home page setting
+  prism_plugin:
+    mode: 'preprocess'    # realtime/preprocess
+    theme: 'tomorrow'
+    line_number: true    # default false
+    custom_css: ''     # optional, custom_css: 'path/to/your/custom.css'
+
+  # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
@@ -72,10 +86,49 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+##  RSS
+feed:
+  type: atom
+  path: atom.xml
+# 文章数，0 为全部
+  limit: 0
+  hub:
+# 是否包含文章内容
+  content: true
+
+leancloud_counter_security:
+  enable_sync: true
+  app_id: GvDoiJgM8GtjfgKlIXgcdArg-gzGzoHsz
+  app_key: IBikYNeDV8WdS3RF1WTESYWu
+  username: 
+  password:
+  
+  # add post views
+leancloud_visitors:
+  enable: true
+  app_id: GvDoiJgM8GtjfgKlIXgcdArg-gzGzoHsz
+  app_key: IBikYNeDV8WdS3RF1WTESYWu
+  
+search: 
+    path: search.xml
+    field: post
+    format: html
+    limit: 10000
+  
+# Extensions
+## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+-
+  type: git
+  repository:  
+    github: git@github.com:muzhi621/muzhi621.github.io.git,master
+    #coding: git@git.dev.tencent.com:muzhi621/muzhi621.git,master
+    #oschina: git@gitee.com:muzhi621/muzhi620.git
+  #branch: master
+-
+  - type: leancloud_counter_security_sync
