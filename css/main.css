@@ -2113,7 +2113,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #54ffff;
+  background: #34c488;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3410,15 +3410,11 @@ ul.breadcrumb li+li:last-child {
   font-size: 26px;
   font-weight: 700;
 }
-.post-body p a {
+.post-body a {
   color: #72baa7;
-  border-bottom: none;
-  border-bottom: 1px solid #0593d3;
 }
-.post-body p a:hover {
+.post-body a:hover {
   color: #0bdca5 3;
-  border-bottom: none;
-  border-bottom: 1px solid #fc6423;
 }
 @media screen and (min-width: 1200px) {
   body {
