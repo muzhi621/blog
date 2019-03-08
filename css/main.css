@@ -2113,7 +2113,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff;
+  background: #f6c236;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3462,9 +3462,6 @@ img.img-topic {
   list-style: none;
 }
 body {
-  line-height: 1.5;
   color: #333;
-  background: #faf3e1;
-  font-size: 14px;
-  font-family: Arial, Roboto, "Droid Sans", "Hiragino Sans GB", "Microsoft YaHei", "Simsun", STXihei, "sans-serif";
+  font-family: 'TIBch', 'Classic Grotesque W01', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'STHeiti', 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, sans-serif;
 }
