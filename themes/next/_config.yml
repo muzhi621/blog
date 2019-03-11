@@ -409,7 +409,7 @@ font:
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
   host: https://fonts.cat.net
-
+  #host: //fonts.css.network
   # Font options:
   # `external: true` will load this font family from `host` above.
   # `family: Times New Roman`. Without any quotes.
@@ -418,14 +418,16 @@ font:
   # Global font settings used for all elements in <body>.
   global:
     external: true
-    family: Lato
+    #family: Lato
+    family: Courier New
     size:
 
-  # Font settings for Headlines (H1, H2, H3, H4, H5, H6).
+  # Font settings for Headlines (H1, H2, H3, H4, H5, H6).  TIBch
   # Fallback to `global` font settings.
   headings:
     external: true
     family: Roboto Slab
+    #family: Hiragino Sans GB
     size:
 
   # Font settings for posts.
@@ -445,6 +447,7 @@ font:
   codes:
     external: true
     family: Roboto Mono
+    #family: muzhi_font2.6
     size: 14
 
 
