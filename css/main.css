@@ -2113,7 +2113,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6193b8;
+  background: #df9318;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3461,7 +3461,7 @@ img.img-topic {
   list-style: none;
 }
 body {
-  background: url("http://api.btstu.cn/sjbz/zsy.php");
+  background-image: url("/images/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
