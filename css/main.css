@@ -2113,7 +2113,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #df9318;
+  background: #549cd0;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3428,7 +3428,7 @@ ul.breadcrumb li+li:last-child {
   }
   .main-inner {
     background: #fff;
-    opacity: 0.9;
+    opacity: 1;
   }
   .posts-expand .post-title-link::before {
     background-image: linear-gradient(90deg, #a166ab 0%, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
