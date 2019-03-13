@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[约瑟夫问题]]></title>
+    <url>%2Fpost%2F3d3935c8.html</url>
+    <content type="text"><![CDATA[约瑟夫（Josephus） 问题（Josephus problem） Josephus 问题（Josephus problem）是下面的游戏：N个人编号从1到N，围坐成一个圆圈。从1号开始传递一个热土豆。经过M次传递后拿着热土豆的人被清除离座，围坐的圆圈缩紧，由坐在被清除的人后面的人拿起热土豆继续进行游戏。最后剩下的人取胜。因此，如果M=0和N=5，则游戏人依序被清除，5号游戏人获胜。如果M=1和N=5，那么被清除的人的顺序是2，4，1，5。 约瑟夫环是一个数学的应用问题：已知n个人（以编号1，2，3…n分别表示）围坐在一张圆桌周围。从编号为k的人开始报数，数到m的那个人出列；他的下一个人又从1开始报数，数到m的那个人又出列；依此规律重复下去，直到圆桌周围的人全部出列。 实现方法方法一：1234567891011121314151617181920212223/* * 方法一 */ public static int Josephus1(int n,int m,int k) &#123; int i,j; LinkedList&lt;Integer&gt; L=new LinkedList&lt;Integer&gt;(); for ( i = 1; i &lt;= n; i++) &#123; L.add(i); &#125; while (L.size()&gt;1) &#123; j=(int)(k+m-2)%L.size(); L.remove(j); k=j+1; &#125; System.out.println(&quot;剩下者编号：&quot;+L.get(0)); return L.get(0); &#125; 方法二12345678910111213141516/** * 方法二 * @param n * @param m * @param k * @return */ public static int Josephus2(int n,int m,int k) &#123; int i,j=0; for ( i = 2; i &lt;= n; i++) &#123; j=(j+m)%i; &#125; System.out.println(&quot;剩下者编号：&quot;+(j+k==n?n:(j+k)%n)); return j+k==n?n:(j+k)%n; &#125; 全部代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970package muzhi1;import java.util.ArrayList;import java.util.LinkedList;import java.util.ListIterator;/** * 约瑟夫环问题 * @author liwu * @param n 总人数 * @param m 数到M的人移除队列 * @param k 开始编号（报数）人的编号 * */public class Test4 &#123; /* * 方法一 */ public static int Josephus1(int n,int m,int k) &#123; int i,j; LinkedList&lt;Integer&gt; L=new LinkedList&lt;Integer&gt;(); for ( i = 1; i &lt;= n; i++) &#123; L.add(i); &#125; while (L.size()&gt;1) &#123; j=(int)(k+m-2)%L.size(); L.remove(j); k=j+1; &#125; System.out.println(&quot;剩下者编号：&quot;+L.get(0)); return L.get(0); &#125; /** * 方法二 * @param n * @param m * @param k * @return */ public static int Josephus2(int n,int m,int k) &#123; int i,j=0; for ( i = 2; i &lt;= n; i++) &#123; j=(j+m)%i; &#125; System.out.println(&quot;剩下者编号：&quot;+(j+k==n?n:(j+k)%n)); return j+k==n?n:(j+k)%n; &#125; public static void main(String[] args) &#123; // TODO Auto-generated method stub int n=5; int m=1; int k=1; Josephus1(n, m,k); Josephus2(n, m,k); &#125;&#125;]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[GitHub & coding + hexo博客搭建]]></title>
     <url>%2Fpost%2F70f18d21.html</url>
     <content type="text"><![CDATA[使用 GitHub Pages 和 Hexo 搭建免费独立博客的总结。将自己的域名访问 GitHub Pages 上的博客。同时，为了在多台电脑上都可以更新博客，采用两个分支的方式来存放文件，master 分支存放 Hexo 静态文件， 新建的source分支存放源文件。 必要配置 在自己的 GitHub 账号下创建一个新的仓库，命名为 username.github.io（username是你的账号名)。 安装 Git1sudo apt-get install git 配置 Git 当安装完 Git 应该做的第一件事情就是设置用户名称和邮件地址。这样做很重要，因为每一个 Git 的提交都会使用这些信息，并且它会写入你的每一次提交中，不可更改： 12git config --global user.name &quot;username&quot;git config --global user.email &quot;username@example.com&quot; 对于 user.email，因为在 GitHub 的 commits 信息上是可见的，所以如果你不想让人知道你的 email，可以 Keeping your email address private: 在GitHub右上方点击你的头像，选择Settings； 在右边的Personal settings侧边栏选择Emails； 选择Keep my email address private。 这样，你就可以使用如下格式的 email 进行配置： 1$ git config --global user.email &quot;username@users.noreply.github.com&quot; Git 与 GitHub与github建立联系 为了能够在本地使用 git 管理 github 上的项目，需要进行一些配置，这里介绍 SSH 的方法。coding与GitHub类似 检查电脑是否已经有 SSH keys。12ls ~/.ssh# Lists the files in your .ssh directory, if they exist 默认情况下，public keys 的文件名是以下的格式之一：id_dsa.pub、id_ecdsa.pub、id_ed25519.pub、id_rsa.pub。因此，如果列出的文件有 public 和 private 钥匙对（例如id_ras.pub和id_rsa），证明已存在 SSH keys。 如果没有 SSH key，则生成新的 SSH key。12ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;# Creates a new ssh key, using the provided email as a label 之后一路回车即可。 向 ssh-agent 添加 key。 首先确保 ssh-agent 可运行： 12# start the ssh-agent in the backgroundssh-agent -s 然后添加 SSH key： 1ssh-add ~/.ssh/id_rsa 在 GitHub 添加 SSH key。 首先，拷贝 key： 12sudo cat ~/.ssh/id_rsa.pub# Copies the contents of the id_rsa.pub file to your cllipboard 然后，在 GitHub 右上方点击头像，选择Settings，在右边的Personal settings侧边栏选择SSH Keys。接着粘贴 key，点击Add key按钮。最后，测试链接： 12ssh -T git@github.com# Attempts to ssh to GitHub 如果你看到： 123The authenticity of host &apos;github.com (207.97.227.239)&apos; can&apos;t be established.RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.Are you sure you want to continue connecting (yes/no)? 就键入：yes。之后将会看到如下信息： 12Hi username! You&apos;ve successfully authenticated, but GitHub does notprovide shell access. Hexo搭建 hexo 博客 并创建两个分支：master 与 source首先建立 hexo 博客123456mkdir ~/Documents/Hexocd ~/Documents/Hexosudo npm install -g hexo-clihexo initsudo npm installsudo npm install hexo-deployer-git 创建 source 分支，并使其为默认分支：可直接在GitHub和coding上操作，并将source设置为默认分支 12345678910git initgit remote add origin git@github.com:username/username.github.io.gitgit add .#添加修改git commit -m &quot;init hexo&quot;#初次提交git checkout -b source#建立分支 hexo 并切换到分支 hexogit push -u origin source#将分支 hexo 提交到 github 创建 空白分支 master123456789101112131415161718192021cd ..#退回上一级目录mkdir new#创建一个新的文件夹用以创建空白分支cd ~/Documents/newgit inittouch README.md#随意创建一个文件，用于提交分支git add .git commit -m &quot;new branch&quot;git remote add origin git@github.com:username/username.github.io.gitgit push origin master#将分支 master 提交到 githubrm README.mdgit add .git commit -m &quot;clear new branch&quot;git push origin mastercd ~/Documents/rm -rf newcd Hexogit pull 执行完成之后，该仓库的默认分支被设为 source，同时还有空白的 master 分支用于存放网页。 设置域名 在 username.github.io 仓库首页选择Settings，向下拉，在GitHub Pages部分的Custom domain中填上自己的域名，点击save保存。此操作会在 master 分支下生成一个 CNAME 文件，里面就是刚填写的域名。 配置 hexo 提交方式 编辑该文件夹下的_config.yml的deploy参数，分支应为 master。 默认生成的_config.yml： 1234# Deployment## Docs: http://hexo.io/docs/deployment.htmldeploy: type: 修改后的_config.yml： 12345678deploy:- type: git repository: #github: git@github.com:muzhi621/muzhi621.github.io.git,master coding: git@git.dev.tencent.com:muzhi621/muzhi621.git,master #oschina: git@gitee.com:muzhi621/muzhi620.git #branch: master 修改博客及部署操作 修改博客内容后依次执行以下命令来提交网站相关的文件： 123git add .git commit -m &quot;自定义内容即可&quot;git push origin source 然后执行以下任意一条生成网站并部署到 GitHub 上。 12hexo generate -dhexo g -d 这样一来，在 GitHub 上的 username.github.io 仓库就有两个分支，一个 source 分支用来存放网站的原始文件，一个 master 分支用来存放生成的静态网页。 域名重置问题及解决方案问题 每次执行完hexo g -d之后，github 仓库设置中的 Custom domain总是被重置，导致域名访问出现 404 错误。 解决方案 在 Hexo 生成的博客的 source 目录下新建一个 CNAME 文件，里面填上自己的域名即可。 博客管理流程 在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理： 依次执行git add .、git commit -m &quot;...&quot;、git push origin source指令将改动推送到 GitHub（此时当前分支应为 source）； 然后才执行 hexo g -d 或 hexo generate -d 发布网站到 master 分支上。 更换电脑时： 使用 git clone git@github.com:username/username.github.io.git 拷贝仓库（默认分支为 source）； 在本地新拷贝的username.github.io文件夹下通过终端依次执行下列指令：sudo npm install -g hexo-cli、sudo npm install、sudo npm install hexo-deployer-git]]></content>
@@ -22,8 +34,8 @@
       </categories>
       <tags>
         <tag>算法</tag>
-        <tag>遗传算法</tag>
         <tag>java</tag>
+        <tag>遗传算法</tag>
       </tags>
   </entry>
   <entry>
@@ -46,8 +58,8 @@
         <category>论文</category>
       </categories>
       <tags>
-        <tag>遗传算法</tag>
         <tag>模式识别</tag>
+        <tag>遗传算法</tag>
         <tag>课程</tag>
       </tags>
   </entry>
