@@ -52,11 +52,11 @@ highlight:
   auto_detect: false
   tab_replace:
   
-  prism_plugin:
-    mode: 'preprocess'    # realtime/preprocess
-    theme: 'tomorrow'
-    line_number: true    # default false
-    custom_css: ''     # optional, custom_css: 'path/to/your/custom.css'
+ #prism_plugin:
+ #   mode: 'preprocess'    # realtime/preprocess
+ #   theme: 'tomorrow'
+ #   line_number: true    # default false
+ #   custom_css: ''     # optional, custom_css: 'path/to/your/custom.css'
 
   # Home page setting
 # path: Root path for your blogs index page. (default = '')
