@@ -127,7 +127,8 @@ deploy:
   type: git
   repository:  
     github: git@github.com:muzhi621/muzhi621.github.io.git,master
-    coding: git@git.dev.tencent.com:muzhi621/muzhi621.git,master
+   # coding: git@git.dev.tencent.com:muzhi621/muzhi621.git,master
+    coding: git@git.dev.tencent.com:muzhi621/muzhi621.coding.me.git,master
     #oschina: git@gitee.com:muzhi621/muzhi620.git
   #branch: master
 -
