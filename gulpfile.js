@@ -27,3 +27,7 @@ gulp.task('minify-js', function() {
         .pipe(uglify())
         .pipe(gulp.dest('./public'));
 });
+
+gulp.task('default', [
+    'minify-html', 'minify-css', 'minify-js'
+]);
