@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://myliwu.work/"/>
-  <updated>2019-03-17T06:39:45.034Z</updated>
+  <updated>2019-03-17T06:41:15.694Z</updated>
   <id>https://myliwu.work/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://myliwu.work/post/9daba997.html"/>
     <id>https://myliwu.work/post/9daba997.html</id>
     <published>2019-03-17T06:39:44.000Z</published>
-    <updated>2019-03-17T06:39:45.034Z</updated>
+    <updated>2019-03-17T06:41:15.694Z</updated>
     
     <summary type="html">
     
@@ -110,9 +110,9 @@
     
       <category term="算法" scheme="https://myliwu.work/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="遗传算法" scheme="https://myliwu.work/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/"/>
-    
       <category term="java" scheme="https://myliwu.work/tags/java/"/>
+    
+      <category term="遗传算法" scheme="https://myliwu.work/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
