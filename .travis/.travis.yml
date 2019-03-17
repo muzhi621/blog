@@ -1,31 +1,49 @@
-language: node_js
-node_js: stable
 
-# S: Build Lifecycle
+#设置语言
+language: node_js  
+# 指定需要sudo权限
+sudo: required
+#设置相应的版本
+node_js: 
+  - 10.15.0
+# 指定缓存模块，可选。缓存可加快编译速度。
+cache:
+    directories:
+        - node_modules    
+before_install:
+  - npm install -g hexo-cli
+#安装hexo及插件
 install:
-  - npm install
-
-#before_script:
- # - npm install -g gulp
-
+  - npm install   
+  - npm install hexo-deployer-git --save
+  - npm i -g yuque-hexo
+# yuque-hexo clean 清除语雀文章,并清除“yuque-hexo”的json文件“yuque.json”
+# yuque-hexo sync 同步语雀的文章，并创建json文件“yuque.json”
+# hexo clean 清理文章
+# hexo generate 重新发布文章
 script:
-  - hexo g
+  - yuque-hexo clean
+  - yuque-hexo sync
+  - hexo clean
+  - hexo generate
 
+# iszengmh修改成自己的github用户名
+# iszengmh@qq.com修改成自己的GitHub邮箱
+# GH_token就是在travis中设置的token，等下会告诉大家怎么配置
+# GH_REF 是下面仓库地址
 after_script:
   - cd ./public
   - git init
-  - git config user.name "muzhi621" 
-  - git config user.email "muzhi621@qq.com" 
+  - git config user.name "muzhi621"   
+  - git config user.email "muzhi621@qq.com"   
   - git add .
-  - git commit -m "Update docs"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
-# E: Build LifeCycle
-
+  - git commit -m "update by Travis-CI"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master 
+ #只监测这个分支，一有动静就开始构建
 branches:
   only:
-    - source 
+  - source 
+# GH_REF 仓库地址
 env:
- global:
-   - GH_REF: github.com/muzhi621/muzhi621.github.io 
-
-  
+    global:
+        - GH_REF: github.com/muzhi621/muzhi621.github.io 
