@@ -42,7 +42,7 @@ after_script:
  #只监测这个分支，一有动静就开始构建
 branches:
   only:
-  - source 
+  - master 
 # GH_REF 仓库地址
 env:
     global:
