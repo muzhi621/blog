@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[测试7]]></title>
+    <url>%2Fpost%2F449e7cc.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[测试3]]></title>
+    <url>%2Fpost%2F32423d5.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[测试2]]></title>
+    <url>%2Fpost%2F74231343.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[测试]]></title>
     <url>%2Fpost%2F9daba997.html</url>
     <content type="text"></content>
@@ -63,9 +78,9 @@
         <category>论文</category>
       </categories>
       <tags>
+        <tag>模式识别</tag>
         <tag>遗传算法</tag>
         <tag>课程</tag>
-        <tag>模式识别</tag>
       </tags>
   </entry>
   <entry>
@@ -76,9 +91,9 @@
         <category>论文</category>
       </categories>
       <tags>
+        <tag>课程</tag>
         <tag>最优化</tag>
         <tag>matlab</tag>
-        <tag>课程</tag>
       </tags>
   </entry>
   <entry>
