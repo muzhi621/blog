@@ -9,7 +9,7 @@ node_js: node
 # 源码所在分支
 branches:
 only:
-- master
+- source
 
 # 安装依赖
 install:
