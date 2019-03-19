@@ -150,6 +150,7 @@ menu:
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
+  
 
 
 # Enable/Disable menu icons / item badges.
@@ -183,7 +184,7 @@ site_state: true
 social:
   GitHub: https://github.com/muzhi621 || github 
   E-Mail: muzhi621@qq.com || envelope
-  Google: https://plus.google.com/u/0/discover || google
+  image: https://img.myliwu.work || image
   Twitter: https://twitter.com/muzhi621 || twitter
   #GitHub: https://github.com/yourname || github
   #E-Mail: mailto:yourname@gmail.com || envelope
@@ -193,7 +194,7 @@ social:
   FB Page: https://www.facebook.com/wu.li.50767984 || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
-  cloud: https://yun.myliwu.work/ || cloud
+  cloud: https://pan.myliwu.work/ || cloud
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
 
