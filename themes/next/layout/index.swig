@@ -9,6 +9,7 @@
 {% endblock %}
 
 {% block content %}
+{% include '_macro/carousel.swig' %}
   <section id="posts" class="posts-expand">
     {% for post in page.posts %}
       {{ post_template.render(post, true) }}
@@ -22,4 +23,4 @@
   {{ sidebar_template.render(false) }}
 {% endblock %}
 
-{% include '_macro/carousel.swig' %}
+
