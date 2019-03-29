@@ -1092,3 +1092,20 @@ reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作�
 wechatpay: /images/wechat.jpg
 alipay: /images/aipay.jpg
  
+#Home carousel map, from means link, img means picture
+carousel: 
+   enable: true
+   item: [
+      {
+        #'link':' ',
+        'img':'https://i2.nicepik.com/files/174/374/573/computer-cup-desk-drink-thumb.jpg'
+      },
+      {
+        #'link':' ',
+        'img':'https://i2.nicepik.com/files/165/50/341/new-wing-emergency-at-the-moment-thumb.jpg'
+      },
+      {
+        #'link':' ',
+        'img':'http://f.hiphotos.baidu.com/image/h%3D300/sign=8ad822e9df00baa1a52c41bb7711b9b1/0b55b319ebc4b745564c5813c1fc1e178b8215de.jpg'
+      },
+   ]
