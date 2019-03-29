@@ -1,6 +1,8 @@
 ---
 title: onedrive搭建个人云盘
-tags: oneIndex
+tags: 
+  - oneIndex
+  - 教程
 categories: 教程
 abbrlink: dbac08c7
 date: 2019-03-03 14:28:13
