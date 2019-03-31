@@ -2154,7 +2154,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e599cb;
+  background: #c2cd9d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3458,12 +3458,6 @@ ul.breadcrumb li+li:last-child {
   color: #0bdca5 3;
 }
 @media screen and (min-width: 1200px) {
-  body {
-    background: url("http://api.btstu.cn/sjbz/zsy.php");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-  }
   #footer a {
     color: #eee;
   }
@@ -3582,11 +3576,12 @@ span#inline-toc {
   line-height: 1.5;
 }
 .posts-expand .post-meta .post-description {
-  font-style: italic;
-  font-size: 14px;
-  margin-top: 30px;
+  font-style: normal;
+  text-align: left;
+  font-size: 18px;
+  margin-top: 13px;
   margin-bottom: 0px;
-  color: #666;
+  color: #444;
 }
 .posts-expand .post-body img {
   border: none;
@@ -3649,13 +3644,106 @@ h2.about-title {
   color: #07b39b;
 }
 p.description {
-  text-align: center;
-  font-size: 14px;
-  font-style: italic;
+  text-align: left;
+  font-size: 18px;
+  font-style: normal;
   color: #666;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 code.description {
   padding: 1px 1px 1px 1px;
   margin: 0px 1px 0px 4px;
+}
+.headband {
+  height: 2.5px;
+  background-image: linear-gradient(90deg, #f79533 0%, #f37055 15%, #ef4e7b 30%, #a166ab 44%, #5073b8 58%, #1098ad 72%, #07b39b 86%, #6dba82 100%);
+}
+.header {
+  line-height: 1.5;
+}
+.container {
+  background-color: rgba(0,0,0,0.35);
+}
+.posts-expand {
+  padding-top: 0px;
+}
+.posts-expand .post-meta {
+  margin: 5px 0px 0px 0px;
+}
+.post-button {
+  margin-top: 0px;
+}
+.header-inner {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.posts-collapse {
+  margin: 50px 0px;
+}
+@media (max-width: 1023px) {
+  .posts-collapse {
+    margin: 50px 20px;
+  }
+}
+.posts-collapse::after {
+  margin-left: -2px;
+  background-image: linear-gradient(180deg, #f79533 0, #f37055 15%, #ef4e7b 30%, #a166ab 44%, #5073b8 58%, #1098ad 72%, #07b39b 86%, #6dba82 100%);
+}
+.posts-collapse .collection-title::before {
+  background-color: #fff;
+}
+.posts-collapse .post-header:hover::before {
+  background-color: #a166ab;
+}
+.posts-collapse .collection-title h1,
+.posts-collapse .collection-title h2 {
+  color: #454545;
+}
+.posts-collapse .post-title a {
+  color: #5073b8;
+}
+.posts-collapse .post-title a:hover {
+  color: #a166ab;
+}
+.posts-collapse .post-header:hover {
+  border-bottom-color: #a166ab;
+}
+.page-archive .archive-page-counter {
+  color: #454545;
+}
+.page-archive .posts-collapse .archive-move-on {
+  top: 10px;
+  opacity: 1;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+.post-block.page {
+  margin-top: 40px;
+}
+.category-all-page {
+  margin: -80px 50px 40px 50px;
+  background-color: #fff;
+  padding: 86px 36px 36px 36px;
+}
+@media (max-width: 767px) {
+  .category-all-page {
+    margin: -73px 15px 50px 15px;
+  }
+  .category-all-page .category-all-title {
+    margin-top: -5px;
+  }
+}
+.tag-cloud {
+  margin: -80px 50px 40px 50px;
+  background-color: #fff;
+  padding: 86px 36px 36px 36px;
+}
+.tag-cloud-title {
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .tag-cloud {
+    margin: -73px 15px 50px 15px;
+    padding: 86px 5px 36px 5px;
+  }
 }
