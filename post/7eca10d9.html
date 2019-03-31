@@ -113,6 +113,12 @@
   
 
   
+    
+      
+    
+
+    
+  
 
   
     
@@ -125,7 +131,7 @@
   
     
     
-    <link href="https://fonts.cat.net/css?family=Courier New:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.cat.net/css?family=Courier New:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -188,7 +194,7 @@
 
 
   <meta name="description" content="遗传算法综述摘  要：遗传算法（Genetic Algorithms, GA）是一种基于遗传学和自然选择原理的启发搜索最优化技术方法。其核心思想来源于达尔文的进化论，“物竞天择”，“适者生存”，模仿借鉴生物进化过程机制而提出的一种启发式全局搜索算法。它常被用于找寻解决需要花费大量时间问题的最优或接近最优的解决方案，通常用于为优化问题和搜索问题生成高质量的解决方案。近年来，随着科学技术的发展遗传算法">
-<meta name="keywords" content="课程,遗传算法,论文,模式识别">
+<meta name="keywords" content="课程,论文,模式识别,遗传算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="模式识别原理与技术">
 <meta property="og:url" content="https://myliwu.work/post/7eca10d9.html">
@@ -222,6 +228,15 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137387609-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137387609-1');
+</script>
 
 
 
@@ -733,11 +748,11 @@
           
             <a href="/tags/课程/" rel="tag"><i class="fa fa-tag"></i>课程</a>
           
-            <a href="/tags/遗传算法/" rel="tag"><i class="fa fa-tag"></i>遗传算法</a>
-          
             <a href="/tags/论文/" rel="tag"><i class="fa fa-tag"></i>论文</a>
           
             <a href="/tags/模式识别/" rel="tag"><i class="fa fa-tag"></i>模式识别</a>
+          
+            <a href="/tags/遗传算法/" rel="tag"><i class="fa fa-tag"></i>遗传算法</a>
           
         </div>
       
@@ -1055,7 +1070,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -1077,13 +1092,43 @@
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.6.0</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.6.0
+
+<span>　<i class="fa fa-bomb"></i></span>
+<span id="showDays"></span>
+
+</div>
 
 
 
 
 -->
 
+<script>
+  var seconds = 1000;
+  var minutes = seconds * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var years = days * 365;
+  var birthDay = Date.UTC(2018,11,16,00,00,00); // 这里设置建站时间
+  setInterval(function() {
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var now = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = now - birthDay;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById('showDays').innerHTML="  "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 时 "+diffMinutes+" 分 "+diffSeconds+" 秒";
+  }, 1000);
+</script>
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
