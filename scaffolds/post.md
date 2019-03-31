@@ -10,7 +10,3 @@ description:
 ---
 <p class="description"></p>
 
-<!-- more -->
-
-
-<hr />
