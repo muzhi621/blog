@@ -64,7 +64,7 @@ rss:
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  since: 2019
+  since: 2018
 
   # Icon between year and copyright info.
   icon:
@@ -441,8 +441,8 @@ font:
   # Fallback to `global` font settings.
   logo:
     external: true
-    family:
-    size:
+    family: Lobster Two
+    size: 
 
   # Font settings for <code> and code blocks.
   codes:
@@ -625,9 +625,10 @@ needmoreshare2:
 # See: https://www.google.com/webmasters
 #google_site_verification:
 
-# Google Analytics
-#google_analytics:
+#Google Analytics 
+google_analytics: UA-137387609-1
 
+ 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster
 #bing_site_verification:
@@ -797,8 +798,8 @@ note:
   #  - modern    bs-callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
-  style: simple
-  icons: false
+  style: flat
+  icons: true
   border_radius: 3
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
   # Offset also applied to label tag variables. This option can work with disabled note tag.

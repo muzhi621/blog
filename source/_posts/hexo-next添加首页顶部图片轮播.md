@@ -1,10 +1,11 @@
 ---
 title: hexo-next添加首页顶部图片轮播
-date: 2019-03-29 19:57:42
-tags: 
+tags:
   - hexo
   - 教程
 categories: 教程
+abbrlink: 336dbc10
+date: 2019-03-29 19:57:42
 copyright:
 ---
 
