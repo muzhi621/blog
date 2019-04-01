@@ -26,14 +26,14 @@ post:
   edit: 编辑
   in: 分类于
   more: 更多
-  read_more: 阅读全文
+  read_more: Read More
   untitled: 未命名
   sticky: 置顶
   toc_empty: 此文章未包含目录
   views: 阅读次数
   comments_count: 评论数
   related_posts: 相关文章
-  copy_button: 复制
+  copy_button: copy
   copy_success: 复制成功
   copy_failure: 复制失败
   copyright:
