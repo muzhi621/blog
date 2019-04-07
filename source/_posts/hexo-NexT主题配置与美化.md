@@ -431,11 +431,11 @@ Already up to date.
 
 > 另外：如果更新 NexT 主题后，配置文件有些新功能不会配置，可以查看 [Releases](https://github.com/iissnan/hexo-theme-next/releases) 页面，去里面找说明。
 
-
+## 
 
 ## 6. 站点配置文件
 
-请先查看 [Hexo 官方文档](https://hexo.io/zh-cn/docs/configuration.html)，再查看下面我贴出的，如果这样后你还是对有些地方比较懵，可以自行 Google。
+## 请先查看 [Hexo 官方文档](https://hexo.io/zh-cn/docs/configuration.html)，再查看下面我贴出的，如果这样后你还是对有些地方比较懵，可以自行 Google。
 
 如果你的文件中没有相关内容，请勿直接添加，且所有的`:`都为英文字符，它后面都有一个空格。
 
@@ -2068,7 +2068,7 @@ code.description {
 }
 ```
 
-### 修改字体
+## 修改字体
 
 优化了这么多，但还有一个最影响博客形象和阅读体验的项没有优化，瓦特？字体！
 
